@@ -32,8 +32,6 @@ namespace TaskTimeTracker.ViewModels
         public MainViewModel()
         {
             ReadConfig();
-
-            //ShowAppConfigWindowCommand = new CommandHandler(() => Workspace.CreateSingletonWindow<AppConfigWindow>(this));
         }
 
         /// <summary>
@@ -66,7 +64,7 @@ namespace TaskTimeTracker.ViewModels
         {
             get
             {
-                if (!object.ReferenceEquals(null, _activeTaskTime) && _activeTaskTime.IsActive)
+                if (!object.ReferenceEquals(null, _activeTaskTime))
                 {
                     return _activeTaskTime.WindowBackgroundColor;
                 }
